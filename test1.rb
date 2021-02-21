@@ -6,13 +6,19 @@ unless pi.connect
   exit -1
 end
 
-led = pi.gpio(4)
-led.mode = PI_OUTPUT
-led.pud = PI_PUD_OFF
+led_red = pi.gpio(4)
+led_red.mode = PI_OUTPUT
+led_green = pi.gpio(27)
+led_green.mode = PI_OUTPUT
 10.times do |i|
-  led.write 1
-  sleep 1
-  led.write 0
-  sleep 1
+  led_red.write 1
+  led_green.write 0
+  sleep 0.5
+  led_red.write 0
+  led_green.write 1
+  sleep 0.5
+  led_red.write 1
+  led_green.write 1
+  sleep 0.5
 end
 pi.stop
