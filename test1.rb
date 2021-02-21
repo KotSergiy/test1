@@ -9,7 +9,7 @@ end
 led = pi.gpio(4)
 led.mode = PI_OUTPUT
 led.pud = PI_PUD_OFF
-3.times do |i|
+10.times do |i|
   led.write 1
   sleep 1
   led.write 0
