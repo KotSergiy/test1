@@ -22,6 +22,7 @@ led_green.mode = PI_OUTPUT
   sleep 0.5
 end
 
+puts "end"
 led_red.write 0
 led_green.write 0
 pi.stop
