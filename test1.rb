@@ -30,7 +30,7 @@ end
 puts
 cb.cancel
 while true do
-  if (gets=='x')
+  if (gets.strip.downcase=='stop')
     break
   end
 end
