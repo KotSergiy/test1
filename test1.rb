@@ -14,7 +14,7 @@ led_green.mode = PI_OUTPUT
 button=pi.gpio(22)
 button.mode=PI_INPUT
 button.pud=PI_PUD_UP
-button.glitch_filter(30)
+button.glitch_filter(5000)
 
 counter=0
 cb=button.callback(EITHER_EDGE){|tick,level|
