@@ -29,5 +29,10 @@ while(counter<10)do
 end
 puts
 cb.cancel
+while true do
+  if (gets=='x')
+    break
+  end
+end
 led_red.write 0
 pi.stop
