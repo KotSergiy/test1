@@ -21,7 +21,7 @@ button.glitch_filter(5000)
 
 cb=button.callback(EITHER_EDGE){|tick,level|
   led_red.write level
-  led_green.write (level xor 1)
+  led_green.write (level ^ 1)
   print '*'
 }
 
